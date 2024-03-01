@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Web Portofolio</title>
+        <link 
+            rel="stylesheet" 
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Material+Icons+Outlined"
+        />
+        <link 
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" 
+            rel="stylesheet"
+        />
+        <link 
+            href="https://example.com/brinnan-black.css"
+            rel="stylesheet"
+        />
+
+        <style>
+            body {
+                font-family: 'Montserrat', sans-serif;
+                margin: 0;
+                padding: 0;
+                background: linear-gradient(135deg, #a8a7d9 0%, #c5c3e5 100%);
+                color: #333;
+            }
+
+            .navbar {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 1em 2em;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 1000;
+            }
+
+            .navbar img {
+                height: 50px;
+                margin-right: 10px;
+            }
+
+            .navbar a {
+                font-weight: 501;
+                text-decoration: none;
+                color: #333;
+                padding: 0 15px;
+                transition: color 0.3s ease;
+            }
+
+            .navbar a:hover {
+                color: #452de0;
+            }
+
+            .navbar #product {
+                display: flex;
+                align-items: center;
+                margin-left: 10px;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 700;
+            }
+
+            .navbar ul {
+                list-style: none;
+                display: flex;
+                gap: 1em;
+                padding: 0; 
+                margin: 0 auto;
+                position: relative;
+            }
+
+            .material-icons-outlined {
+                font-size: 24px;
+                margin-right: 100px;
+            }
+
+            .hero {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 2em;
+                background: linear-gradient(135deg, #e6eefa 30%, #f4f8ff 50%, #a3e3f6 90%);
+                margin-top: 0;
+                height: 100vh;
+                border-radius: 0;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            }
+
+            .hero .content {
+                flex-direction: column;
+                align-items: start;
+                max-width: 90%;
+                margin-bottom: 1em;
+                display: flex;
+                margin: 0;
+            }
+
+            .hero h1 {
+                font-size: 5.5em;
+                color: black;
+                margin: 0;
+                margin-left: 150px;
+                
+            }
+
+            .hero p {
+                font-size: 1.5em;
+                color: #333;
+                margin: 0.5em 0;
+                margin-left: 150px;
+                
+            }
+
+            .hero .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+            }
+
+            .hero .border{
+                border-radius: 100%;
+                width: 250px;
+                height: 280px;
+                position: relative;
+                background: transparent;
+                margin-right: 200px;
+                bottom: 100px;
+                display: block;
+            }
+
+            .hero .border::before {
+                content: '';
+                position: absolute;
+                top: -15px; 
+                bottom: -10px; 
+                left: -10px; 
+                right: -10px;
+                border: 2px solid #be9ce0;
+                border-radius: inherit;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+            #box-foto {
+                width: 250px;
+                height: 275px;
+                border-radius: 50%;
+                box-shadow: 0 4px 8px rgba(12, 9, 168, 0.692);
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                position: relative;
+                z-index: 2;
+            }
+
+            .hero img {
+                width: 100%;
+                height: auto;
+                position: absolute;
+                bottom: 0px;
+                border-radius: 0px 0px 44% 44%;
+                transition: transform 0.3s;
+            }
+
+            .hero img:hover {
+                transform: scale(1.05);
+            }
+
+            #name {
+                background: rgba(255, 255, 255, 0.5);
+                border: 1px solid #FFFFFF; 
+                border-radius: 20px; 
+                padding: 1em; 
+                position: absolute; 
+                bottom: -4.3em; 
+                left: 123px;
+                transform: translateX(-50%); 
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+                z-index: 1; 
+                max-width: 80%; 
+                text-align: center;
+                display: inline-block;
+                bottom: 35px; 
+            }
+
+            #name p {
+                color: #452de0; 
+                margin: 0; 
+                font-weight: bold;
+            }
+
+            #name h5 {
+                color: #333;
+                margin: 0;
+                font-weight: 501;
+            }
+
+            .button {
+                padding: 1em 2em;
+                margin-top: 1em;
+                background-color: #452de0;
+                border: none;
+                border-radius: 20px;
+                color: white;
+                font-weight: 700;
+                cursor: pointer;
+                transition: background-color 0.3s, transform 0.3s;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                margin-left: 150px;
+                font-size: 1em;
+                text-decoration: none;
+            }
+
+            .button:hover {
+                background-color: #7b68ee;
+                transform: scale(1.05);
+            }
+
+            #learn-code {
+                padding: 4em 2em;
+                text-align: left;
+                position: relative;
+                left: 500px;
+                top: 0px; 
+            }
+
+            #learn-code h2 {
+                color: #333; 
+                font-size: 1.5em; 
+            }
+
+            #learn-code p {
+                color: #666; 
+                font-size: 0.9em;
+                position: relative;
+                right: 150px;
+            }
+
+            #images-container {
+                position: relative;
+                left: 250px;
+                top: 200px;
+                
+            }
+
+            #images-container img {
+                width: 250px; 
+                height: auto; 
+                border-radius: 100%; 
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+                transition: transform 0.3s;
+            }
+
+            #images-container img:hover {
+                transform: scale(1.05); 
+            }
+
+            .test {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 2em;
+                background: linear-gradient(135deg, #e6eefa 30%, #f4f8ff 50%, #a3e3f6 90%);
+                margin-top: 0;
+                height: 100vh;
+                border-radius: 0;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                position: relative; 
+            }
+
+            .test .content {
+                flex-direction: column;
+                align-items: start;
+                max-width: 90%;
+                margin-bottom: 1em;
+                display: flex;
+                margin: 0;
+            }
+
+            .test h1 {
+                font-size: 4em;
+                color: black;
+                margin: 0;
+                margin-left: 300px;
+            }
+
+            .test p {
+                font-size: 1em;
+                color: #333;
+                margin: 0.5em 0;
+                margin-left: 300px;
+            }
+
+            .test img {
+                width: 500px;
+                height: auto;
+                border-radius: 50%;
+                box-shadow: 0 4px 8px rgba(12, 9, 168, 0.692);
+                margin-right: 300px;
+                transition: transform 0.3s;
+            }
+
+            .test img:hover {
+                transform: scale(1.05);
+            }
+
+            .button-test {
+                padding: 0.7em 1.5em;
+                margin-top: 1em;
+                background-color: #452de0;
+                border: none;
+                border-radius: 20px;
+                color: white;
+                font-weight: 700;
+                cursor: pointer;
+                transition: background-color 0.3s, transform 0.3s;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                margin-left: 300px;
+                font-size: 0.9em;
+                text-decoration: none;
+            }
+
+            .button-test:hover {
+                background-color: #7b68ee;
+                transform: scale(1.05);
+            }
+
+            @media (max-width: 640px) {
+                .hero {
+                    display: column;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 2em;
+                    background: linear-gradient(135deg, #e6eefa 30%, #f4f8ff 50%, #a3e3f6 90%);
+                    margin-top: 0;
+                    height: 100vh;
+                    border-radius: 0;
+                    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                }
+
+                #images-container img {
+                    width: 250px; 
+                    height: auto; 
+                    border-radius: 10px; 
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+                    transition: transform 0.3s;
+                }                
+                
+                .hero .container {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    position: relative;
+                }
+                
+                .hero img {
+                    width: 100%;
+                    height: auto;
+                    position: absolute;
+                    bottom: 0px;
+                    border-radius: 0px 0px 44% 44%;
+                }
+
+                .hero h1 {
+                    font-size: 2.5em;
+                    margin: 0.5em 0;
+                }
+
+                .hero p {
+                    font-size: 1.5em;
+                    margin-bottom: 1em;
+                }
+
+                .test img {
+                    width: 45vw;
+                    height: auto;
+                    margin-right: 10px;
+                }
+
+                .test h1 {
+                    font-size: 3em;
+                    margin-left: 10px;
+                }
+
+                .test p {
+                    font-size: 1.2em;
+                    margin-left: 10px;
+                }
+
+                .test button {
+                    margin-left: 10px;
+                    font-size: 0.8em;
+                }
+
+                .button {
+                    padding: 10px 20px;
+                    margin-left: 10px;
+                    font-size: 0.8em;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="navbar">
+            <div id="product">
+                <img src="logo.png" alt="Logo">
+                <span>AshecOne</span>
+            </div>
+            <ul>
+                <a href="#">PORTOFOLIO</a>
+                <a href="https://www.linkedin.com/in/trian-verson-tumanan-49a1221a4/">PROFIL</a>
+                <a href="https://drive.google.com/file/d/1V4qyXfjm6g_8kOeqDAPgTL9IjpT03pJh/view?usp=sharing">CV</a>
+            </ul>
+            <a href="#" class="material-icons-outlined">menu</a>
+        </div>
+
+        <div class="hero">
+            <div class="content">
+                <h1>Hello, Econ is here</h1>
+                <p>A Physics Graduate's Journey into Creative Coding</p>
+                <a class="button" target="_blank" href="https://www.instagram.com/ashecone/">Contact</a>
+                <div id="images-container">
+                    <img src="learning-coding.webp" alt="Learning">
+                </div>
+                <div id="learn-code">
+                    <h2>Learn to Code</h2>
+                    <p>This web is my learning <br> progress to be a web dev</p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="border">
+                    <div id="box-foto">
+                        <img src="foto-profil.png" alt="Foto Profil">
+                    </div>
+                </div>
+                <div id="name">
+                    <p>Trian Verson Tumanan</p>
+                    <h5>SouthEast Sulawesi, Kendari</h5>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="test">
+            <div class="content">
+                <h1>Suit Game</h1>
+                <p>Prompt Alert command of Rock Paper Scissors against computer.</p>
+                <a class="button-test" href="https://github.com/AshecOne/exercise-fundamental/blob/main/suitgame.html">Try!</a>
+            </div>
+            <img src="suit-game.png" alt="Suit Game">
+        </div>
+        
+        <div class="test">
+            <div class="content">
+                <h1>Shooting Game</h1>
+                <p>Prompt Alert command of Two Players shoot each other.</p>
+                <a class="button-test" href="https://github.com/AshecOne/exercise-fundamental/blob/main/shootingGame.html">Try!</a>
+            </div>
+            <img src="shootGame.png" alt="Shooting Game">
+        </div>
+        
+        <div class="test">
+            <div class="content">
+                <h1>Toko Kelontong</h1>
+                <p>Prompt Alert command of e-commerce.</p>
+                <a class="button-test" href="https://github.com/AshecOne/exercise-fundamental/blob/main/tokoku.html">Try!</a>
+            </div>
+            <img src="kelontong.png" alt="Toko Kelontong">
+        </div>
+
+    </body>
+</html>

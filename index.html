@@ -25,7 +25,7 @@
                 <span>AshecOne</span>
             </div>
             <ul>
-                <a href="#">PORTOFOLIO</a>
+                <a href="#portofolio">PORTOFOLIO</a>
                 <a href="https://www.linkedin.com/in/trian-verson-tumanan-49a1221a4/">PROFIL</a>
                 <a href="https://drive.google.com/file/d/1V4qyXfjm6g_8kOeqDAPgTL9IjpT03pJh/view?usp=sharing">CV</a>
             </ul>
@@ -56,35 +56,38 @@
                     <h5>SouthEast Sulawesi, Kendari</h5>
                 </div>
             </div>
-            
         </div>
-
-        <div class="test">
-            <div class="content">
+        <div class="test" id="portofolio" >
+            <div class="isi">
+                <img src="suit-game.png" alt="Suit Game">
                 <h1>Suit Game</h1>
                 <p>Prompt Alert command of Rock Paper Scissors against computer.</p>
-                <a class="button-test" href="https://github.com/AshecOne/exercise-fundamental/blob/main/suitgame.html">Try!</a>
+                <a class="button-test" onclick="main()">Try!</a>
             </div>
-            <img src="suit-game.png" alt="Suit Game">
-        </div>
-        
-        <div class="test">
-            <div class="content">
+            <div class="isi">
+                <img src="shootGame.png" alt="Shooting Game">
                 <h1>Shooting Game</h1>
                 <p>Prompt Alert command of Two Players shoot each other.</p>
-                <a class="button-test" href="https://github.com/AshecOne/exercise-fundamental/blob/main/shootingGame.html">Try!</a>
+                <a class="button-test" onclick="startGame()">Try!</a>
             </div>
-            <img src="shootGame.png" alt="Shooting Game">
-        </div>
-        
-        <div class="test">
-            <div class="content">
+            <div class="isi">
+                <img src="kelontong.png" alt="Toko Kelontong">
                 <h1>Toko Kelontong</h1>
                 <p>Prompt Alert command of e-commerce.</p>
-                <a class="button-test" href="https://github.com/AshecOne/exercise-fundamental/blob/main/tokoku.html">Try!</a>
+                <a class="button-test" onclick="bukaToko()">Try!</a>
             </div>
-            <img src="kelontong.png" alt="Toko Kelontong">
         </div>
-
+        <footer class="site-footer">
+            <div class="footer-content">
+              <div class="footer-branding">
+                <img src="logo.png" alt="Logo" class="footer-logo" />
+                <p class="footer-text">AshecOne</p>
+              </div>
+              <p class="footer-copy">&copy; 2024 Seorang Pelajar Sejati</p>
+            </div>
+        </footer>
+        <script src="suitgame.js"></script>
+        <script src="shootinggame.js"></script>
+        <script src="toko.js"></script>
     </body>
 </html>

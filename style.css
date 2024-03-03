@@ -276,6 +276,7 @@ body {
 .isi p {
     font-size: 1.2em; 
     margin-bottom: 1em;
+    text-align: center;
 }
 
 .button-test {
@@ -339,34 +340,38 @@ body {
     margin-top: 10px; 
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 640px) {
     body {
         background: linear-gradient(135deg, #e6eefa, #f4f8ff, #a3e3f6);
     }
 
     .navbar {
         justify-content: space-between; 
-        padding: 0.5em; 
+        padding: 0.4em; 
     }
 
     .navbar img {
         height: auto; 
-        width: 25%;
+        width: 15%;
     }
 
     .navbar #product {
-        font-size: 1.em;
+        font-size: 10px;
+        align-items: center;
+        left: 15px;
+        position: relative;
     }
 
-    .navbar a {
-        font-size: 1em;
-        position: relative;
-        right: 30px;
+    .navbar ul a {
+        display: none;
+        cursor: none;
     }
 
     .material-icons-outlined {
         position: relative;
-        left: 70px;
+        display: block;
+        left: 15%;
+        font-size: 20px;
     }
 
     .hero {
@@ -376,20 +381,21 @@ body {
         padding: 1em;
         height: auto;
         margin-top: 50px; 
-        margin-bottom: 150px;
     }
     
     .hero h1 {
-        font-size: 3em;
+        font-size: 2em;
         margin: 0.5em 0; 
+        position: relative;
+        bottom: 30px;
     }
     
     .hero .content,
     .hero .container {
         align-items: center;
         margin: 0; 
-        bottom: 250px;
-        margin-bottom:-145px;
+        bottom: 289px;
+        left: 5px;
     }
 
     .hero .content p {
@@ -397,8 +403,9 @@ body {
         text-align: center; 
         padding: 10px 0;
         position: relative;
-        bottom: 20px;
+        bottom: -67px;
         right: 70px;
+        font-size: 1em;
     }
 
     .hero .border,
@@ -422,36 +429,39 @@ body {
 
     #images-container img {
         position: relative;
-        left: -400px;
-        top: 225px;
+        left: -340px;
+        top: 180px;
+        width: 150px;
     }
 
     .button {
         margin: 20px auto; 
         display: block; 
         order: 2;
-        top: 125px;
+        top: 135px;
         position: relative;
+        font-size: 13px;
     }
 
     #learn-code {
         padding: 1em;
         text-align: center;
-        left: 160px;
-        top: 490px;
+        left: 85px;
+        top: 509px;
     }
 
     #learn-code h2 {
-        font-size: 2em;
+        font-size: 15px;
         position: relative;
         bottom: 240px;
     }
 
     #learn-code p {
-        font-size: 1em;
+        font-size: 11px;
         position: relative;
         bottom: 255px;
         left: -80px;
+        font-weight: bold;
     }
 
     .test {
@@ -466,18 +476,28 @@ body {
     }
 
     .isi img {
-        width: auto; 
+        width: 80%; 
         max-height: none; 
         transition: transform 0.3s;
     }
 
+    .isi p {
+        font-size: 1em; 
+        margin-bottom: 1em;
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
     .button-test {
-        font-size: 1em;
+        font-size: 1opx;
     }
 
     .footer-content {
+        position: relative;
         flex-direction: column;
-        margin-top: -10px;
+        margin-top: -35px;
+        
     }
 
     .footer-branding {
@@ -486,12 +506,15 @@ body {
 
     .footer-logo,
     .footer-text {
-        font-size: 1.3em;
+        font-size: 15px;
         position: relative;
-        top: 5px;
+        max-width: 60px;
+        top: 25px;
     }
 
     .footer-copy {
-        bottom: 5px;
+        bottom: -8px;
+        position: relative;
+        font-size: smaller;
     }
 }
